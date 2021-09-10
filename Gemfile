@@ -9,3 +9,4 @@ ruby '2.7.3'
 gem "rspec"
 gem "sinatra"
 gem 'capybara'
+gem 'sinatra-contrib'
