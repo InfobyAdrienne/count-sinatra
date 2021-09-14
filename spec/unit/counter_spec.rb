@@ -23,4 +23,22 @@ describe Counter do
       expect(counter.count).to eq -1
     end
   end
+
+  describe '#timer' do 
+    it 'shows the last time the count was clicked' do 
+      counter = Counter.new
+      counter.time
+      expect(counter.time).to eq Time.new.strftime("%I:%M:%S %p")
+    end 
+  end 
+
+  describe '#reset' do 
+    it 'resets the counter' do 
+      counter = Counter.new 
+      counter.reset 
+      # This is resetting the counter to zero, so is the original expectation as the initial counter 
+      expect(counter.count).to eq 0
+    end 
+  end 
+
 end

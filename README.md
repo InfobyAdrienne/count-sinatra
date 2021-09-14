@@ -1,3 +1,15 @@
+# Comments 
+- I was receiving errors when writing the feature tests for incrementing and decrementing because of what content the page was expecting. In one case it was expecting '0', in another '1' and in another '-1'. I commented out the lines in each test that expected the page to have numbered content. An example of the errors I was receiving is below. Was my solution okay? 
+
+
+  1) increment the count click the Increment button and see the number increment
+     Failure/Error: expect(page).to have_content 1
+       expected to find text "1" in "0\nThe counter was last updated at 04:05:46 PM"
+     ./spec/feature/incrementing_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+
+--
+
 # Description
 This is a counter web app built in Ruby using Sinatra and Capybara.
 

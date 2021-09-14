@@ -24,4 +24,10 @@ class CounterApp < Sinatra::Base
     @counter.decrement
     redirect '/'
   end
+
+  post '/reset' do 
+    @counter.reset
+    redirect '/'
+  end 
+
 end
