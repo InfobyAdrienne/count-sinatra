@@ -8,6 +8,6 @@ feature "increment the count" do
     visit("/")
     expect(page).to have_button('Increment')
     click_button "Increment"
-    # expect(page).to have_content 1
+    expect(page).to have_content 1
   end
 end
